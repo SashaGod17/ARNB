@@ -1,0 +1,7 @@
+{
+  "name": "ARNB",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
