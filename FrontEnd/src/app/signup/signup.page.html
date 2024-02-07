@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="login-title">Registro de Nuevo Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="welcome-container">
+    <div class="welcome-text">Bienvenido a IONRNB</div>
+    <div class="login-info">Completa el siguiente formulario para crear tu cuenta</div>
+  </div>
+
+  <div class="card-container">
+    <form [formGroup]="registerForm">
+      <ion-card class="login-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Nombre</ion-label>
+            <ion-input type="text" class="input-custom" formControlName="nombre"></ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Email</ion-label>
+            <ion-input type="email" class="input-custom" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Contraseña</ion-label>
+            <ion-input type="password" class="input-custom" formControlName="password"></ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Número de Teléfono</ion-label>
+            <ion-input type="tel" class="input-custom" formControlName="telefono"></ion-input>
+          </ion-item>
+
+          <ion-button expand="block" color="primary" class="ion-margin-top" [disabled]="registerForm.invalid">Registrar</ion-button>
+
+          <p class="crear-cuenta">¿Ya tienes una cuenta? <a href="#" class="link-custom">Iniciar sesión</a></p>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

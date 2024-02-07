@@ -1,0 +1,104 @@
+.login-card {
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .crear-cuenta {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .crear-cuenta a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .crear-cuenta a:hover {
+    text-decoration: underline;
+  }
+  
+  .login-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .link-custom {
+    font-style: italic;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .link-custom:hover {
+    text-decoration: underline;
+  }
+  
+  .header-custom {
+    background-color: #ffffff; /* Fondo blanco */
+  }
+  
+  .title-custom {
+    color: #007bff; /* Texto azul */
+  }
+  
+  .welcome-text {
+    text-align: center;
+    padding-top: 20px; /* Espacio para el texto de bienvenida */
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - 100px); /* Ajusta según la altura de tu header y el texto de bienvenida */
+  }
+  
+  .welcome-container {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  .login-info {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+  
+  ion-input.ng-invalid.ng-touched,
+  ion-input.ng-invalid.ng-dirty {
+    background-color: red;
+  }
+  
+  ion-input.ng.valid {
+    background-color: green;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+}

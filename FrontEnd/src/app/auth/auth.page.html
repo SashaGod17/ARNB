@@ -12,23 +12,26 @@
   </div>
 
   <div class="card-container">
-    <ion-card class="login-card">
-      <ion-card-content>
-        <ion-item lines="none">
-          <ion-label position="floating" color="primary">Usuario</ion-label>
-          <ion-input type="text" class="input-custom"></ion-input>
-        </ion-item>
-  
-        <ion-item lines="none">
-          <ion-label position="floating" color="primary">Contraseña</ion-label>
-          <ion-input type="password" class="input-custom"></ion-input>
-        </ion-item>
-  
-        <ion-button expand="block" color="primary" class="ion-margin-top">Iniciar Sesión</ion-button>
-  
-        <p class="crear-cuenta">¿No tienes una cuenta? <a href="#" class="link-custom">Crear cuenta</a></p>
-      </ion-card-content>
-    </ion-card>
+    <form [formGroup]="loginForm">
+      <ion-card class="login-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Email</ion-label>
+            <ion-input type="text" class="input-custom" formControlName="email"></ion-input>
+          </ion-item>
+    
+          <ion-item lines="none">
+            <ion-label position="floating" color="primary">Contraseña</ion-label>
+            <ion-input type="password" class="input-custom" formControlName="password"></ion-input>
+          </ion-item>
+    
+          <ion-button expand="block" color="primary" class="ion-margin-top" [disabled]="loginForm.invalid">Iniciar Sesión</ion-button>
+    
+          <p class="crear-cuenta">¿No tienes una cuenta? <a href="#" class="link-custom" routerLink="/signup">Crear cuenta</a></p>
+        </ion-card-content>
+      </ion-card>
+    </form>
+    
   </div>
 </ion-content>
 

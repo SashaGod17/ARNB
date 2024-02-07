@@ -33,7 +33,14 @@ const userSchema = new mongoose.Schema({
             }
         }
     },
-
+    phoneNumber: {
+        type: String,
+        validate(value) {
+            if (!validator.isMobilePhone(value, 'any')) {
+                throw new Error('Invalid phone number');
+            }
+        }
+    },
     preferences: {
         type: [String], 
         default: []
